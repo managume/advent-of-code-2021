@@ -1,7 +1,7 @@
 const fs = require('fs')
 const input = fs.readFileSync('input.txt', 'utf-8').split(',').map((num) => parseInt(num))
 
-function latternfishSimulation(input,days) {
+function lanternfishSimulation(input,days) {
     var state = Array.from(input);
     for (let index = 1; index <= days; index++) {
         state.map((num, index, array) => {
@@ -16,5 +16,5 @@ function latternfishSimulation(input,days) {
     return state.length
 }
 
-var ret = latternfishSimulation(input,80);
+var ret = lanternfishSimulation(input,80);
 console.log(ret)
